@@ -54,10 +54,8 @@ def submit_single_image():
         file_url = upload_file_to_s3(file, Config.S3_BUCKET)
          # create an instance of <Your_Model>
 
-        # data = request.json
         file = Image(
             user_id=current_user.id,
-            # image_url=request.form.get('image_url'),
             username=request.form.get('username'),
             description=request.form.get('description'),
             image_url=file_url
@@ -109,7 +107,6 @@ def submit_single_comment(id):
             user_id=form.user_id.data,
             image_id=form.image_id.data,
             username=form.username.data,
-            # profpic=form.profpic.data,
             comment=form.comment.data
 
         )
@@ -122,7 +119,6 @@ def submit_single_comment(id):
 @image_routes.route('/<int:id>/comments/<int:comment_id>', methods=['PUT'])
 @login_required
 def edit_comment(id, comment_id):
-    # image = Image.query.get(id)
     comment = Comment.query.get(comment_id)
     form = comment_form.EditCommentForm()
     form['csrf_token'].data = request.cookies['csrf_token']
@@ -131,12 +127,7 @@ def edit_comment(id, comment_id):
         db.session.add(comment)
         db.session.commit()
         return comment.to_dict()
-    # data = request.json
-    # comment = Comment.query.get(comment_id)
-    # comment.comment = request.json['comment']
-    # db.session.add(comment)
-    # db.session.commit()
-    # return comment.to_dict()
+
 
 
 # #Delete a Single Comment

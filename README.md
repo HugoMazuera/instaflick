@@ -5,7 +5,7 @@
 Welcome to Instaflick! Instaflick is an Instagram clone made for users to socialize. Users can post images, comment on other user's posts, and interact with one another.
 
 ## Splash Page / Login Page
-![image](https://user-images.githubusercontent.com/100460237/182057373-25195e3d-cd46-4646-8289-6070394add9e.png)
+![Screenshot 2022-12-05 at 1 21 30 PM](https://user-images.githubusercontent.com/98191996/205735502-0b1d9e7a-d6bf-4dbf-87f1-69092a8071f8.png)
 
 ## Signup Page
 ![image](https://user-images.githubusercontent.com/100460237/182057464-caba09ef-2222-4c5c-8c64-476ffd1cb41a.png)
